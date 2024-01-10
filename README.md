@@ -1,2 +1,2 @@
-# WeFriends
-Trying to build highly scalable Java app...
+# CitySocial
+Connect with people with similar interest in your city🧐.
