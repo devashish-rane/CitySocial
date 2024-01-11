@@ -1,6 +1,7 @@
 package com.devashish.wefriends.repository;
 
 import com.devashish.wefriends.entity.Users;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
