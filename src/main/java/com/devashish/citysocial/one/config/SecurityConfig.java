@@ -17,17 +17,17 @@ public class SecurityConfig   {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.headers().frameOptions().disable();
-        http.authorizeRequests()
-                .antMatchers("/api/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .defaultSuccessUrl("/home")
-                .and()
-                .logout()
-                .logoutSuccessUrl("/login?logout");
+//        http.authorizeRequests()
+//                .antMatchers("/api/**")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and()
+//                .formLogin()
+//                .defaultSuccessUrl("/home")
+//                .and()
+//                .logout()
+//                .logoutSuccessUrl("/login?logout");
         return http.build();
     }
 
