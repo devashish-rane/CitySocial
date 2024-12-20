@@ -25,5 +25,3 @@ jobs:
     - name: Build with Maven
       run: mvn clean install -DskipTests=true  # Build the project (skipping tests for simplicity)
 
-    - name: Run Spring Boot Application
-      run: mvn spring-boot:run  # Run the Spring Boot application to ensure it starts
