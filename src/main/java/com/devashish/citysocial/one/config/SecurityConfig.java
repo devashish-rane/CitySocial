@@ -16,14 +16,18 @@ public class SecurityConfig   {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable();
-
+        http.headers().frameOptions().disable();
         http.authorizeRequests()
-//                .antMatchers("/public/**")
-//                .permitAll()
+                .antMatchers("/api/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();
+                .formLogin()
+                .defaultSuccessUrl("/home")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/login?logout");
         return http.build();
     }
 
