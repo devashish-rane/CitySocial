@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 public class OneController {
-    @GetMapping("/api/home")
+    @GetMapping("/")
     String homePahe(){
         return "this is home";
     }
