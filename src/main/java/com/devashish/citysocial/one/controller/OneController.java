@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 public class OneController {
     @GetMapping("/")
-    String homePahe(){
+    String homePath(){
         return "this is home";
     }
 }

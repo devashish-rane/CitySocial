@@ -21,6 +21,6 @@ public class Person {
     transient String password;
 
     @ManyToMany
-    Set<Interest> hasInterest;
+    Set<Place> hasInterest;
 
 }
