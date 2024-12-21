@@ -4,11 +4,10 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Data
-public class Interest {
+public class Place {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +15,9 @@ public class Interest {
     String title;
     String description;
 
+    @OneToMany
+    Set<Image> images;
+
     @ManyToMany
-    Set<Person> hasPerson;
+    Set<Person> visitedByPerson;
 }

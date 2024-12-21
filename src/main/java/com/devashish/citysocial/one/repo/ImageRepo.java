@@ -1,12 +1,10 @@
 package com.devashish.citysocial.one.repo;
 
-import com.devashish.citysocial.one.domain.Place;
+import com.devashish.citysocial.one.domain.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface InterestRepo extends JpaRepository<Place, Long> {
-
+public interface ImageRepo extends JpaRepository< Image,Long> {
+    Image findByName(String name);
 }
